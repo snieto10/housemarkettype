@@ -40,6 +40,12 @@ a:hover {
   font-size: 1.4rem;
 }
 
+.btn:hover {
+  color: blue;
+  background-color: white;
+  border: 1px solid blue;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
