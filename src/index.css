@@ -1,0 +1,46 @@
+:root {
+  --color-primary: rgb(255, 98, 0);
+  --border-radius: 5px;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+*,
+* ::before,
+* ::after {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+/*BUTTONS*/
+
+.btn {
+  border: 0;
+  background: blue;
+  border-radius: 10px;
+  padding: 5px 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
