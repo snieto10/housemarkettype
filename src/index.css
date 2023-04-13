@@ -45,6 +45,11 @@ a:hover {
   background-color: white;
   border: 1px solid blue;
 }
+.btn:active {
+  color: white;
+  background-color: blue;
+  border: none;
+}
 
 .container {
   max-width: 1200px;

@@ -1,0 +1,67 @@
+.SIbox {
+  width: 300px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.SIbackground {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(197, 197, 197, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SIx {
+  text-align: right;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.SItitle {
+  text-align: center;
+  margin: 0 0 0px 0;
+}
+
+.SIpara {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.SIinput1 {
+  margin-bottom: 3px;
+  display: block;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 25px;
+  outline: 0;
+  padding: 5px 10px;
+}
+
+.SIinput1:focus {
+  border: 1px solid black;
+}
+
+.SIinput2 {
+  margin-bottom: 10px;
+  display: block;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 25px;
+  outline: 0;
+  padding: 5px 10px;
+}
+
+.SIinput2:focus {
+  border: 1px solid black;
+}
+
+.SIwidth {
+  max-width: 200px;
+  margin: 0 auto;
+}
