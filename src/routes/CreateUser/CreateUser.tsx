@@ -1,25 +1,15 @@
-import { useState } from 'react';
-import google from '../../assets/images/google.png';
-import './signIn.css';
+import './createUser.css';
 
-interface Props {
-  signInOpen: boolean;
-  openSignIn: () => void;
-}
-
-function SignIn({ signInOpen, openSignIn }: Props) {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  console.log(signInOpen);
+function CreateUser() {
   return (
     <>
-      <div className={signInOpen ? 'SIbackground' : 'SIbackground-none'}>
+      <div className={'SIbackground'}>
         <div className='SIbox'>
           <div className='SIx'>
-            <span onClick={openSignIn}>X</span>
+            <span>X</span>
           </div>
-          <h1 className='SItitle'>Member Sign In</h1>
-          <p className='SIpara'>Dont have an account? Create free account</p>
+          <h1 className='SItitle'>Create Free Account</h1>
+          <p className='SIpara'>Already have an account ? Sign in</p>
           <div className='SIwidth'>
             <form>
               <label className='SIlabel' htmlFor='email'>
@@ -36,18 +26,35 @@ function SignIn({ signInOpen, openSignIn }: Props) {
                 className='SIinput2'
                 type='password'
               />
+              <label className='SIlabel' htmlFor='password'>
+                First Name
+              </label>
+              <input
+                name='password'
+                id='password'
+                className='SIinput2'
+                type='password'
+              />
+              <label className='SIlabel' htmlFor='password'>
+                Last Name
+              </label>
+              <input
+                name='password'
+                id='password'
+                className='SIinput2'
+                type='password'
+              />
             </form>
           </div>
           <br />
           <div className='SIcenter'>
-            <button className='btn SIsignin-btn'>Sign In</button>
+            <button className='btn SIsignin-btn'>Create Account</button>
           </div>
 
           <p className='SIor'>or</p>
           <div className='SIcenter'>
             <button className='btn SIgoogle-btn SIcenter'>
-              <img className='SIimage' src={google} alt='' />
-              Sign in with Google
+              Continue with Google
             </button>
           </div>
         </div>
@@ -56,4 +63,4 @@ function SignIn({ signInOpen, openSignIn }: Props) {
   );
 }
 
-export default SignIn;
+export default CreateUser;
