@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import google from '../../assets/images/google.png';
 import './signIn.css';
 
 function SignIn() {
@@ -13,10 +14,14 @@ function SignIn() {
           <p className='SIpara'>Dont have an account? Create free account</p>
           <div className='SIwidth'>
             <form>
-              <label htmlFor='email'>Email:</label>
+              <label className='SIlabel' htmlFor='email'>
+                Email:
+              </label>
               <input className='SIinput1' name='email' id='email' type='text' />
               <br />
-              <label htmlFor='password'>Password:</label>
+              <label className='SIlabel' htmlFor='password'>
+                Password:
+              </label>
               <input
                 name='password'
                 id='password'
@@ -26,11 +31,17 @@ function SignIn() {
             </form>
           </div>
           <br />
-          <button>Sign In</button>
+          <div className='SIcenter'>
+            <button className='btn SIsignin-btn'>Sign In</button>
+          </div>
 
-          <p>or</p>
-
-          <button>Google</button>
+          <p className='SIor'>or</p>
+          <div className='SIcenter'>
+            <button className='btn SIgoogle-btn SIcenter'>
+              <img className='SIimage' src={google} alt='' />
+              Sign in with Google
+            </button>
+          </div>
         </div>
       </div>
     </>
