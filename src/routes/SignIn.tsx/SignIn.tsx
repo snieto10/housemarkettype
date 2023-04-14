@@ -9,7 +9,9 @@ function SignIn() {
     <>
       <div className=' SIbackground'>
         <div className='SIbox'>
-          <div className='SIx'>X</div>
+          <div className='SIx'>
+            <span>X</span>
+          </div>
           <h1 className='SItitle'>Member Sign In</h1>
           <p className='SIpara'>Dont have an account? Create free account</p>
           <div className='SIwidth'>
