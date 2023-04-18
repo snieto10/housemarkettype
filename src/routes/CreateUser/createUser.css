@@ -1,13 +1,13 @@
 .SIbox {
   width: 300px;
   background-color: white;
-  margin: 10px;
+  margin: auto;
   border-radius: 5px;
   padding-bottom: 30px;
 }
 
 .SIbackground {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .SIbackground-none {
@@ -113,4 +114,9 @@
 
 .SIgoogle-btn:hover {
   background-color: lightblue !important;
+}
+
+.SIspan {
+  color: blue;
+  cursor: pointer;
 }

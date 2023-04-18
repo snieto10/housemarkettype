@@ -1,5 +1,5 @@
 import MenuBar from '../../components/MenuBar/MenuBar';
-import Body from '../../components/Body';
+import Body from '../../components/Body1/Body1';
 import Footer from '../../components/Footer';
 import { Outlet } from 'react-router-dom';
 

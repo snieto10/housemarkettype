@@ -5,12 +5,12 @@ import './signIn.css';
 interface Props {
   signInOpen: boolean;
   openSignIn: () => void;
+  signInToCreateUser: () => void;
 }
 
-function SignIn({ signInOpen, openSignIn }: Props) {
+function SignIn({ signInOpen, openSignIn, signInToCreateUser }: Props) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  console.log(signInOpen);
   return (
     <>
       <div className={signInOpen ? 'SIbackground' : 'SIbackground-none'}>
@@ -19,7 +19,12 @@ function SignIn({ signInOpen, openSignIn }: Props) {
             <span onClick={openSignIn}>X</span>
           </div>
           <h1 className='SItitle'>Member Sign In</h1>
-          <p className='SIpara'>Dont have an account? Create free account</p>
+          <p className='SIpara'>
+            Dont have an account?{' '}
+            <span onClick={signInToCreateUser} className='SIspan'>
+              Create free account
+            </span>
+          </p>
           <div className='SIwidth'>
             <form>
               <label className='SIlabel' htmlFor='email'>

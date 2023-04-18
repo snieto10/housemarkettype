@@ -1,28 +1,49 @@
 import './createUser.css';
+import logo from '../../assets/images/google.png';
 
-function CreateUser() {
+interface Props {
+  createUserOpen: boolean;
+  openCreateUser: () => void;
+  createUserToSignIn: () => void;
+}
+
+function CreateUser({
+  openCreateUser,
+  createUserOpen,
+  createUserToSignIn,
+}: Props) {
   return (
     <>
-      <div className={'SIbackground'}>
+      <div className={createUserOpen ? 'SIbackground' : 'SIbackground-none'}>
         <div className='SIbox'>
           <div className='SIx'>
-            <span>X</span>
+            <span onClick={openCreateUser}>X</span>
           </div>
           <h1 className='SItitle'>Create Free Account</h1>
-          <p className='SIpara'>Already have an account ? Sign in</p>
+          <p className='SIpara'>
+            Already have an account ?{' '}
+            <span className='SIspan' onClick={createUserToSignIn}>
+              Sign in
+            </span>
+          </p>
           <div className='SIwidth'>
             <form>
-              <label className='SIlabel' htmlFor='email'>
+              <label className='SIlabel' htmlFor='email1'>
                 Email:
               </label>
-              <input className='SIinput1' name='email' id='email' type='text' />
+              <input
+                className='SIinput1'
+                name='email1'
+                id='email1'
+                type='text'
+              />
               <br />
-              <label className='SIlabel' htmlFor='password'>
+              <label className='SIlabel' htmlFor='password1'>
                 Password:
               </label>
               <input
-                name='password'
-                id='password'
+                name='password1'
+                id='password1'
                 className='SIinput2'
                 type='password'
               />
@@ -30,19 +51,19 @@ function CreateUser() {
                 First Name
               </label>
               <input
-                name='password'
-                id='password'
+                name='firstName'
+                id='firstName'
                 className='SIinput2'
-                type='password'
+                type='text'
               />
               <label className='SIlabel' htmlFor='password'>
                 Last Name
               </label>
               <input
-                name='password'
-                id='password'
+                name='lastName'
+                id='palastNamessword'
                 className='SIinput2'
-                type='password'
+                type='text'
               />
             </form>
           </div>
@@ -54,6 +75,7 @@ function CreateUser() {
           <p className='SIor'>or</p>
           <div className='SIcenter'>
             <button className='btn SIgoogle-btn SIcenter'>
+              <img className='SIimage' src={logo} alt='' />
               Continue with Google
             </button>
           </div>
