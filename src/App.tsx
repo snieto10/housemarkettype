@@ -8,7 +8,7 @@ import Body1 from './components/Body1/Body1';
 function App() {
   const [count, setCount] = useState(0);
   const [signInOpen, setSignInOpen] = useState(false);
-  const [createUserOpen, setCreateUserOpen] = useState(true);
+  const [createUserOpen, setCreateUserOpen] = useState(false);
 
   const openSignIn = () => {
     setSignInOpen((prev) => !prev);

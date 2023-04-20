@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import {
+  signInWithGooglePopUp,
+  createUserDocumentFromAuth,
+} from '../../utils/firebase.config';
 import google from '../../assets/images/google.png';
 import './signIn.css';
 
@@ -11,6 +15,14 @@ interface Props {
 function SignIn({ signInOpen, openSignIn, signInToCreateUser }: Props) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
+  const logGoogleUser = async () => {
+    const { user } = await signInWithGooglePopUp();
+    createUserDocumentFromAuth(user);
+    const userDocRef = await createUserDocumentFromAuth(user);
+    openSignIn();
+  };
+
   return (
     <>
       <div className={signInOpen ? 'SIbackground' : 'SIbackground-none'}>
@@ -50,7 +62,10 @@ function SignIn({ signInOpen, openSignIn, signInToCreateUser }: Props) {
 
           <p className='SIor'>or</p>
           <div className='SIcenter'>
-            <button className='btn SIgoogle-btn SIcenter'>
+            <button
+              className='btn SIgoogle-btn SIcenter'
+              onClick={logGoogleUser}
+            >
               <img className='SIimage' src={google} alt='' />
               Sign in with Google
             </button>
